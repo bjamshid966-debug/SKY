@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ulug‘bek osmoni — Samarqand rasadxonasi</title>
+<meta name="description" content="Mirzo Ulug‘bek va uning yulduzlar jadvali haqida interaktiv sayt.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<header class="top">
+  <a href="#bosh" class="brand">Ulug‘bek osmoni</a>
+  <nav>
+    <a href="#yulduzlar">Yulduzlar</a>
+    <a href="#tarix">Tarix</a>
+    <a href="#raqamlar">Raqamlar</a>
+    <button id="sound" aria-pressed="false" title="Fon ovozi">Ovoz: o‘chiq</button>
+  </nav>
+</header>
+
+<main>
+  <section id="bosh" class="hero">
+    <h1>Besh asr oldin<br>Samarqandda osmon<br>o‘lchangan</h1>
+    <p>1420-yillarda Mirzo Ulug‘bek shahar chekkasida rasadxona qurdi. Uning jadvali yulduzlarning o‘rnini asrlar davomida aniq ko‘rsatib keldi.</p>
+    <p class="hint">Orqadagi osmonda yulduz turkumlarining ustiga bosing.</p>
+  </section>
+
+  <section id="yulduzlar" class="stage">
+    <aside id="info" aria-live="polite">
+      <h2 id="i-title">Yulduzni tanlang</h2>
+      <p id="i-text">Osmon sekin aylanadi. Chiziq bilan bog‘langan turkumlar ustiga olib borsangiz, ular yorishadi.</p>
+    </aside>
+  </section>
+
+  <section id="tarix" class="block">
+    <h2>Ulug‘bek hayotidan</h2>
+    <ol class="timeline">
+      <li><time>1394</time><p>Sultoniyada tug‘ildi. Bobosi Amir Temur edi.</p></li>
+      <li><time>1417–1420</time><p>Samarqandda Ulug‘bek madrasasi qurildi. Unda ilm-fan darslari ham o‘qitilgan.</p></li>
+      <li><time>1428–1429</time><p>Obi-Rahmat tepaligida rasadxona qurilishi boshlandi. Uning ichida katta sekstant bo‘lgan.</p></li>
+      <li><time>~1437</time><p>«Ziji Sultoniy» yulduzlar jadvali yakunlandi. Unda 1018 ta yulduz bor.</p></li>
+      <li><time>1449</time><p>Ulug‘bek vafot etdi. Rasadxona keyinchalik vayron bo‘ldi.</p></li>
+      <li><time>1908</time><p>Arxeolog Vyatkin rasadxonaning poydevori va sekstant izini topdi.</p></li>
+    </ol>
+  </section>
+
+  <section id="raqamlar" class="block stats">
+    <h2>Raqamlarda</h2>
+    <div class="grid">
+      <div><b data-n="1018">0</b><span>jadvaldagi yulduz</span></div>
+      <div><b data-n="40">0</b><span>metr — sekstant radiusi (taxminan)</span></div>
+      <div><b data-n="58">0</b><span>soniya — yil uzunligidagi xato</span></div>
+      <div><b data-n="1437">0</b><span>jadval tugagan yil (taxminan)</span></div>
+    </div>
+    <p class="note">Ulug‘bek tropik yilni 365 kun 6 soat 10 daqiqa 8 soniya deb hisoblagan.</p>
+  </section>
+
+  <section class="block calc">
+    <h2>Yoshingiz osmonda necha marta aylandi?</h2>
+    <label>Tug‘ilgan yilingiz
+      <input id="year" type="number" min="1900" max="2026" value="2000">
+    </label>
+    <p id="calc-out"></p>
+  </section>
+</main>
+
+<footer>
+  <p>Ma’lumotlar umumiy tarixiy manbalarga asoslangan. Sayt o‘quv maqsadida yaratilgan.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
